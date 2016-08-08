@@ -19,19 +19,23 @@ router.get('/index', function(req, res, next) {
 
 
 router.get('/a', function(req, res, next) {
-  res.render('a', { title: 'chengkj web app' });
+  res.render('a', { title: 'a web app' });
 });
 
 router.get('/b', function(req, res, next) {
-  res.render('b', { title: 'chengkj web app' });
+  res.render('b', { title: 'b web app' });
+});
+router.get('/c', function(req, res, next) {
+  res.render('c', { title: 'c web app' });
 });
 
+
 router.get('/abc', function(req, res, next) {
-  res.render('abc', { title: 'chengkj web app' });
+  res.render('abc', { title: 'abc web app' });
 });
 
 router.get('/first', function(req, res, next) {
-  res.render('first', { title: 'first test' });
+  res.render('first', { title: 'first web app' });
 });
 
 module.exports = router;
