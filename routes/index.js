@@ -22,8 +22,8 @@ router.get('/a', function(req, res, next) {
   res.render('a', { title: 'a web app' });
 });
 
-router.get('/b', function(req, res, next) {
-  res.render('b', { title: 'b web app' });
+router.get('/test', function(req, res, next) {
+  res.render('test', { title: 'b web app' });
 });
 router.get('/c', function(req, res, next) {
   res.render('c', { title: 'c web app' });
