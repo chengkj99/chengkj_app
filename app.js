@@ -25,7 +25,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));//静态资源目录
+app.use('/pub',express.static(path.join(__dirname, 'public'))); //带前缀的静态资源目录
 global.__base = __dirname + '/public/';
 
 app.use('/', routes);

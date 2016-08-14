@@ -16,6 +16,10 @@ router.get('/index', function(req, res, next) {
 });
 
 
+router.get('/file', function(req, res, next) {
+  res.render('file_upload', { title: 'file upload' });
+});
+
 
 
 router.get('/a', function(req, res, next) {
@@ -37,5 +41,6 @@ router.get('/abc', function(req, res, next) {
 router.get('/first', function(req, res, next) {
   res.render('first', { title: 'first web app' });
 });
+
 
 module.exports = router;
