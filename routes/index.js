@@ -20,26 +20,21 @@ router.get('/file', function(req, res, next) {
   res.render('file_upload', { title: 'file upload' });
 });
 
-
-
-router.get('/a', function(req, res, next) {
-  res.render('a', { title: 'a web app' });
+router.get('/es6', function(req, res, next) {
+  res.render('es6Demo', { title: 'b web app' });
 });
+
+
 
 router.get('/test', function(req, res, next) {
   res.render('test', { title: 'b web app' });
 });
-router.get('/c', function(req, res, next) {
-  res.render('c', { title: 'c web app' });
-});
-
-
-router.get('/abc', function(req, res, next) {
-  res.render('abc', { title: 'abc web app' });
-});
 
 router.get('/first', function(req, res, next) {
   res.render('first', { title: 'first web app' });
+});
+router.get('/bundle', function(req, res, next) {
+  res.render('bundle', { title: 'a web app' });
 });
 
 
