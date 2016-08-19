@@ -19,3 +19,30 @@ for (var i = 0; i < 10; i++) {
     };
 }
 a[6]();
+
+
+function f() { console.log('I am outside!'); }
+(function () {
+  if (false) {
+    // 重复声明一次函数f
+    function f() { console.log('I am inside!'); }
+  }
+
+  f();
+
+}());
+
+function f() { console.log('outoutoutout  I am outside!'); }
+(function () {
+  if(false) {
+    // 重复声明一次函数f
+    function f() { console.log('ininiininin   I am inside!'); }
+  }
+
+  f();
+}());
+
+// const a=10;
+// a=5;//报错
+
+
