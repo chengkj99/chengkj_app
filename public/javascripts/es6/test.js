@@ -1,10 +1,10 @@
 /**
  * Created by MaxCheng on 2016/8/15.
  */
+require('../../stylesheets/test.css');
+
 var array = [1, 2, 3];
 array.forEach(v => console.log(v));
-
-
 class Project {
     constructor(name) {
         this.name = name;
@@ -23,8 +23,6 @@ function test() {
     }
 }
 test();
-
-
 var project = new Project("Journal");
 project.start(); // "Project Journal starting"
 console.log(project.start())
