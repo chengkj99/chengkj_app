@@ -12,8 +12,12 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
+
+app.set('view engine', 'html');
+app.engine('html', require('ejs-mate'));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -21,7 +25,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));//静态资源目录
+app.use('/pub',express.static(path.join(__dirname, 'public'))); //带前缀的静态资源目录
+global.__base = __dirname + '/public/';
 
 app.use('/', routes);
 app.use('/users', users);
