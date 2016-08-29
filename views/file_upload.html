@@ -5,26 +5,47 @@
     <link rel='stylesheet' href='/pub/stylesheets/style.css' />
 </head>
 <body>
-
-<header></header>
-<body>
-	<div>
+<div class="head"></div>
+<div class="body">
 		<!--
 		FormData 对象，可以把form中所有表单元素的name与value组成一个queryString，
 		提交到后台。在使用Ajax提交时，使用FormData对象可以减少拼接queryString的工作量。
 		-->
-		<form id="fileUpload" enctype="multipart/form-data">
-			<!--只有使用了multipart/form-data，设置MIME编码，才能完整的传递文件数据-->
-			<input type="file" name="file_upload">
-			<button class="submit">上传</button>
-		</form>
-	</div>
-
-</body>
-<footer></footer>
+	<!--传绝对路径的方式-->
+	<!--<div>-->
+		<!--&lt;!&ndash;只有使用了multipart/form-data，设置MIME编码，才能完整的传递文件数据&ndash;&gt;-->
+		<!--<input type="file" name="file_upload" id="fileUpload">-->
+		<!--<button class="submit">上传</button>-->
+	<!--</div>-->
 
 
+
+
+	<form id="uploadForm">
+		<p>原图标
+			<input type="text" id="oriPic" style="width: 180px;color:black; background-color: white;" >
+			<input type="file" id="oriPicFile" onchange="oriPic.value=this.value" name="file" style="display:none">
+			<button class="btn btn-default" type="button" onclick="oriPicFile.click()" style="width:100px;">选择文件</button>
+		</p>
+		<button class="modal-default-button">提交</button>
+
+
+		<!--<p>hover图标：-->
+			<!--<input type="text" id="nowPic" style="width: 180px;color:black; background-color: white;" >-->
+			<!--<input type="file" id="nowPicFile" onchange="nowPic.value=this.value" name="file" style="display:none">-->
+			<!--<button class="btn btn-default" type="button" onclick="nowPicFile.click()" style="width:100px;">选择文件</button>-->
+		<!--</p>-->
+
+		<!--<p>移动端图标：-->
+			<!--<input type="text" id="mobilePic" style="width: 180px;color:black; background-color: white;">-->
+			<!--<input type="file" id="mobilePicFile" onchange="mobilePic.value=this.value" name="file" style="display:none">-->
+			<!--<button class="btn btn-default" type="button" onclick="mobilePicFile.click()" style="width:100px;">选择文件</button>-->
+		<!--</p>-->
+
+	</form>
+</div>
+<div class="footer"></div>
 </body>
 <!--<script src="/chengkj_app/node_modules/jquery/dist/jquery.js" type="text/javascript"></script>-->
-<script src="/pub/javascripts/es5/file_upload.js" type="text/javascript"></script>
+<script src="/pub/javascripts/es5/file_upload.js"></script>
 </html>

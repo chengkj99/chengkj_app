@@ -40,8 +40,9 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -53,7 +54,7 @@
 	/**
 	 * Created by MaxCheng on 2016/8/15.
 	 */
-	__webpack_require__(2);
+	__webpack_require__(47);
 
 	var array = [1, 2, 3];
 	array.forEach(function (v) {
@@ -93,17 +94,17 @@
 	console.log(project.start());
 
 /***/ },
-/* 1 */,
-/* 2 */
+
+/***/ 47:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(3);
+	var content = __webpack_require__(48);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(50)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -120,10 +121,11 @@
 	}
 
 /***/ },
-/* 3 */
+
+/***/ 48:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(4)();
+	exports = module.exports = __webpack_require__(49)();
 	// imports
 
 
@@ -134,7 +136,8 @@
 
 
 /***/ },
-/* 4 */
+
+/***/ 49:
 /***/ function(module, exports) {
 
 	/*
@@ -190,7 +193,8 @@
 
 
 /***/ },
-/* 5 */
+
+/***/ 50:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -442,4 +446,5 @@
 
 
 /***/ }
-/******/ ]);
+
+/******/ });

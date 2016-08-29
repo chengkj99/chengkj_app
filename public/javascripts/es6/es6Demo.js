@@ -12,13 +12,17 @@ console.log('b:'+b) //1
 console.log('a:'+a) //ReferenceError: a is not defined
 
 //two:
-var a = [];
-for (var i = 0; i < 10; i++) {
+let a = [];
+for (let i = 0; i < 10; i++) {
     a[i] = function () {
         console.log(i);
     };
 }
 a[6]();
+
+document.write(new Date())
+document.write('<br>')
+document.write(a[6]());
 
 
 function f() { console.log('I am outside!'); }

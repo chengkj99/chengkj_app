@@ -61,12 +61,21 @@
 
 	//two:
 	var a = [];
-	for (var i = 0; i < 10; i++) {
+
+	var _loop = function _loop(i) {
 	  a[i] = function () {
 	    console.log(i);
 	  };
+	};
+
+	for (var i = 0; i < 10; i++) {
+	  _loop(i);
 	}
 	a[6]();
+
+	document.write(new Date());
+	document.write('<br>');
+	document.write(a[6]());
 
 	function f() {
 	  console.log('I am outside!');
