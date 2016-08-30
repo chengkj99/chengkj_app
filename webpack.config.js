@@ -7,10 +7,11 @@ var path=require('path');
 module.exports = {
 
     entry: {
-        bundle: "./public/javascripts/es6/main.js",
-        file_upload: "./public/javascripts/es6/file_upload.js",
-        es6Demo: "./public/javascripts/es6/es6Demo.js",
-        test:"./public/javascripts/es6/test.js"
+        // bundle: "./public/javascripts/es6/main.js",
+        file_upload: "./public/javascripts/es6/file_upload.js"
+        // es6Demo: "./public/javascripts/es6/es6Demo.js",
+        // test:"./public/javascripts/es6/test.js",
+        // lencloud:'./public/javascripts/es6/lencloud.js'
     },
     output: {//打包输出的文件
         path: __dirname,

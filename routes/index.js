@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
+var qiniuDao=require('./upload_qiniu');
+var qiniu=require('./qiniu')
 
 router.all('/secret', function (req, res, next) {
   console.log('Accessing the secret section ...');
@@ -37,5 +38,16 @@ router.get('/bundle', function(req, res, next) {
   res.render('bundle', { title: 'a web app' });
 });
 
+
+/*qiniu upload接口*/
+router.post('/upload',function(req,res,next){
+  console.log('qiniu service---------------------------------');
+  qiniuDao.qiniuUploader(req, res, next);
+});
+router.post('/qiniu',function(req,res,next){
+
+  console.log('---------------------------qiniu----------------------------------------')
+  qiniu.upLoader(req,res,next);
+})
 
 module.exports = router;

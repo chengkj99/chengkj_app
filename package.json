@@ -13,6 +13,7 @@
     "ejs": "^2.4.2",
     "express": "~4.13.4",
     "jquery": "^3.1.0",
+    "leancloud-storage": "^1.3.3",
     "morgan": "~1.7.0",
     "multiparty": "^4.1.2",
     "qiniu": "^6.1.11",
